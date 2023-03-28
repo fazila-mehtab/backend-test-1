@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./dist",
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "strict": true
+  }
+}

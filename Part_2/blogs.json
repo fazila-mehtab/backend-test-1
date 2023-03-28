@@ -1,0 +1,53 @@
+[
+  {
+    "reference": "00001",
+    "title": "Title Test",
+    "description": "Description Test",
+    "main_image": "images/main_image_1_test.jpg",
+    "additional_images": [
+      "images/additional_image_1_test.jpg",
+      "images/additional_image_2_test.jpg",
+      "images/additional_image_3_test.jpg"
+    ],
+    "date_time": 1671017885
+  },
+  {
+    "reference": "00002",
+    "title": "Title Test 2",
+    "description": "Description Test: 2!",
+    "main_image": "images/main_image_2_test.jpg",
+    "date_time": 1671017981
+  },
+  {
+    "reference": "00003",
+    "title": "The 5th Blog",
+    "description": "Description for the 5th blog",
+    "main_image": "1680030480560-280494814.jpg",
+    "additional_images": [],
+    "date_time": 1675344691725
+  },
+  {
+    "reference": "00004",
+    "title": "New blog",
+    "description": "Description for new blog",
+    "main_image": "1680037201742-259692977.jpg",
+    "additional_images": [],
+    "date_time": 1671017885
+  },
+  {
+    "reference": "00005",
+    "title": "New blog",
+    "description": "Description for new blog",
+    "main_image": "1680037220940-488493766.jpg",
+    "additional_images": [],
+    "date_time": 1671017885
+  },
+  {
+    "reference": "00006",
+    "title": "New blog",
+    "description": "Description for new blog",
+    "main_image": "1680037495069-643126419.jpg",
+    "additional_images": [],
+    "date_time": 1671017885
+  }
+]
