@@ -1,18 +1,13 @@
 import User from "../../../domain/entities/User";
 import MongooseUser from "../../orm/mongoose/schemas/User";
+import MongooseUserBlogPost from "../../orm/mongoose/schemas/UserBlogPost";
 import UserRepository from "../../../domain/repositories/UserRepository";
 import UserSTO from "../../stos/mongoose/UserSTO";
 import { ID } from "../../../domain/entities/Entity";
 
 export default class UserRepositoryMongo implements UserRepository {
   async persist(domainEntity: User): Promise<User | null> {
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      password,
-    } = domainEntity;
+    const { firstName, lastName, email, phone, password } = domainEntity;
     const mongooseUser = new MongooseUser({
       first_name: firstName,
       last_name: lastName,
@@ -25,14 +20,7 @@ export default class UserRepositoryMongo implements UserRepository {
   }
 
   async merge(domainEntity: User): Promise<User | null> {
-    const {
-      id,
-      firstName,
-      lastName,
-      email,
-      phone,
-      password,
-    } = domainEntity;
+    const { id, firstName, lastName, email, phone, password } = domainEntity;
     const mongooseUser = await MongooseUser.findByIdAndUpdate(
       id,
       {
@@ -50,6 +38,10 @@ export default class UserRepositoryMongo implements UserRepository {
   }
 
   async remove(entityId: ID): Promise<boolean | null> {
+    const mongooseUserBlogPostDelete = await MongooseUserBlogPost.deleteMany({
+      user_id: entityId,
+    });
+
     return MongooseUser.findOneAndDelete({ _id: entityId });
   }
 
